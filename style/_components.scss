@@ -1,0 +1,152 @@
+@use "_variables" as *;
+@use "_fonts" as *;
+
+.c-hero {
+    height: max-content;
+    background-image: url('../images/desktop/image-hero.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.c-nav {
+    &__ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style: none;
+        height: var(--text-4xl);
+    }
+
+    &__li {
+        color: $main-white;
+        font-size: var(--text-xxs);
+        cursor: pointer;
+        transition: 0.1s;
+        &:hover{
+            border-bottom: solid 2px $main-white;
+        }
+    }
+
+    &__ulFooter{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        list-style: none;
+        gap: var(--spacing-12);
+        padding: 0;
+        padding-top: var(--spacing-12);
+        margin: 0;
+        height: var(--text-2xl);
+        @media only screen and (max-width: 1024px) {
+            flex-direction: column;
+            height: fit-content;
+        }
+    }
+}
+
+
+
+.c-intro {
+    &__img {
+        margin-right: calc(-1*var(--spacing-32));
+        @media only screen and (max-width: 1024px) {
+            margin: 0;
+        }
+    }
+
+    &__text {
+        background-color: $main-white;
+        margin-top: var(--spacing-64);
+        margin-left: calc(-1*var(--spacing-32));
+        @media only screen and (max-width: 1024px) {
+            margin: 0;
+        }
+    }
+
+    &__h2 {
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 200;
+        text-transform: capitalize;
+    }
+
+    &__p {
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 100;
+    }
+}
+
+.c-cards {
+    &__card {
+        height: 25rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+        transition: 0.1s;
+        &:hover{
+            filter: opacity(80%);
+        }
+        @media only screen and (max-width: 1024px) {
+            height: 10rem;
+        }
+    }
+}
+
+.c-btn{
+    background-color: $main-white;
+    color: $main-dark;
+    font-size: var(--text-sm);
+    font-weight: 100;
+    width: 100%;
+    padding: var(--spacing-2);
+    border: solid 2px $main-dark;
+    cursor: pointer;
+    transition: 0.1s;
+    &:hover{
+        background-color: $main-dark;
+        color: $main-white;
+    }
+}
+
+.c-footer{
+    background-color: $main-dark;
+    margin-top: var(--spacing-64);
+    &__text{
+        color: $main-gray;
+        margin: 0;
+    }
+    &__row{
+        @media only screen and (max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }  
+    }
+    &__block{
+        @media only screen and (max-width: 1024px) {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.c-social{
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-12);
+    justify-content: end;
+    height: var(--text-2xl);
+    padding: 0;
+    &__icon{
+        cursor: pointer;
+        transition: 0.1s;
+        &:hover{
+            border-bottom: solid 2px $main-white;
+        }
+    }
+}

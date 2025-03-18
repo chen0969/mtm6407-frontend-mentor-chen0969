@@ -1,0 +1,41 @@
+@use "_variables" as *;
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+// icon
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+}
+
+p, a, i, label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+.f-h1{
+    color: $main-white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    text-transform: capitalize;
+    border: 2px solid $main-white;
+}
+
+.f-h2{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 200;
+    text-transform: capitalize;
+    font-size: var(--text-2xl);
+    @media only screen and (max-width: 767.98px) {
+        text-align: center;
+    }
+}
+
+.f-h3{
+    color: $main-white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    text-transform: capitalize;
+    font-size: var(--text-lg);
+}

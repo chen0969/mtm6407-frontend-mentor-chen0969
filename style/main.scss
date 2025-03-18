@@ -1,0 +1,12 @@
+@use "_variables" as *;
+@use "_fonts" as *;
+@use "_components" as *;
+
+body{
+    background-color: $main-white;
+    font-size: 15px;
+}
+
+header{
+    background-color: $main-gray;
+}
